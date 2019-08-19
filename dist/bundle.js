@@ -166,6 +166,17 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
+/***/ "./src/data.xml":
+/*!**********************!*\
+  !*** ./src/data.xml ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = {\"note\":{\"to\":[\"Mary\"],\"from\":[\"John\"],\"heading\":[\"Reminder\"],\"body\":[\"Call Cindy on Tuesday\"]}}\n\n//# sourceURL=webpack:///./src/data.xml?");
+
+/***/ }),
+
 /***/ "./src/icon.jpg":
 /*!**********************!*\
   !*** ./src/icon.jpg ***!
@@ -207,7 +218,7 @@ eval("module.exports = __webpack_require__.p + \"ad8e0bcf35bbab2786c5045cd93781f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _icon_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon.jpg */ \"./src/icon.jpg\");\n/* harmony import */ var _icon_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_icon_jpg__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\nfunction component() {\r\n    let element = document.createElement('div');\r\n\r\n    element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(['Hello', 'webpack'], ' ');\r\n    element.classList.add('hello');\r\n\r\n    // 将图像添加到我们已经存在的 div 中。\r\n    var myIcon = new Image();\r\n    myIcon.src = _icon_jpg__WEBPACK_IMPORTED_MODULE_2___default.a;\r\n\r\n    element.appendChild(myIcon);\r\n\r\n    return element;\r\n}\r\n\r\ndocument.body.appendChild(component());\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _icon_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./icon.jpg */ \"./src/icon.jpg\");\n/* harmony import */ var _icon_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_icon_jpg__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _data_xml__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data.xml */ \"./src/data.xml\");\n/* harmony import */ var _data_xml__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_data_xml__WEBPACK_IMPORTED_MODULE_3__);\n\r\n\r\n\r\n\r\n\r\nfunction component() {\r\n    let element = document.createElement('div');\r\n\r\n    element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join(['Hello', 'webpack'], ' ');\r\n    element.classList.add('hello');\r\n\r\n    // 将图像添加到我们已经存在的 div 中。\r\n    var myIcon = new Image();\r\n    myIcon.src = _icon_jpg__WEBPACK_IMPORTED_MODULE_2___default.a;\r\n\r\n    element.appendChild(myIcon);\r\n\r\n    console.log(_data_xml__WEBPACK_IMPORTED_MODULE_3___default.a);\r\n\r\n    return element;\r\n}\r\n\r\ndocument.body.appendChild(component());\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
