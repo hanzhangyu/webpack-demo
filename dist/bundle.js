@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar getUrl = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ./icon.jpg */ \"./src/icon.jpg\"));\n// Module\nexports.push([module.i, \".hello {\\r\\n    color: red;\\r\\n    background: url(\" + ___CSS_LOADER_URL___0___ + \");\\r\\n}\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Imports\nvar getUrl = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\nvar ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ./iconfont.woff2 */ \"./src/iconfont.woff2\"));\nvar ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(/*! ./iconfont.woff */ \"./src/iconfont.woff\"));\nvar ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(/*! ./icon.jpg */ \"./src/icon.jpg\"));\n// Module\nexports.push([module.i, \"@font-face {\\r\\n    font-family: \\\"iconfont\\\";\\r\\n    src: url(\" + ___CSS_LOADER_URL___0___ + \") format('woff2'),\\r\\n    url(\" + ___CSS_LOADER_URL___1___ + \") format('woff');\\r\\n}\\r\\n\\r\\n.hello {\\r\\n    font-family: \\\"iconfont\\\";\\r\\n    color: red;\\r\\n    background: url(\" + ___CSS_LOADER_URL___2___ + \");\\r\\n}\\r\\n\\r\\n.hello:before {\\r\\n    content: \\\"\\\\e712\\\";\\r\\n}\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -174,6 +174,28 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("module.exports = __webpack_require__.p + \"95ecd2f4fe945bea740a852a3c1fcb50.jpg\";\n\n//# sourceURL=webpack:///./src/icon.jpg?");
+
+/***/ }),
+
+/***/ "./src/iconfont.woff":
+/*!***************************!*\
+  !*** ./src/iconfont.woff ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"e83153c2de2d015edce013ba5d2d4e29.woff\";\n\n//# sourceURL=webpack:///./src/iconfont.woff?");
+
+/***/ }),
+
+/***/ "./src/iconfont.woff2":
+/*!****************************!*\
+  !*** ./src/iconfont.woff2 ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"ad8e0bcf35bbab2786c5045cd93781fc.woff2\";\n\n//# sourceURL=webpack:///./src/iconfont.woff2?");
 
 /***/ }),
 
