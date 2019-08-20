@@ -13,7 +13,8 @@ module.exports = {
   output: {
     filename: "[name].bundle.js",
     chunkFilename: '[name].bundle.js', // 决定 non-entry chunk(非入口 chunk) 的名称
-    path: path.resolve(__dirname, "dist")
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "./"
   },
   plugins: [
     new CleanWebpackPlugin(),
