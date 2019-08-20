@@ -1,5 +1,14 @@
-var webpackNumbers =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("lodash"));
+	else if(typeof define === 'function' && define.amd)
+		define(["lodash"], factory);
+	else if(typeof exports === 'object')
+		exports["webpackNumbers"] = factory(require("lodash"));
+	else
+		root["webpackNumbers"] = factory(root["_"]);
+})(window, function(__WEBPACK_EXTERNAL_MODULE_lodash__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -117,8 +126,9 @@ eval("module.exports = JSON.parse(\"[{\\\"num\\\":1,\\\"word\\\":\\\"One\\\"},{\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = undefined;\n\n//# sourceURL=webpack://webpackNumbers/external_%7B%22commonjs%22:%22lodash%22,%22commonjs2%22:%22lodash%22,%22amd%22:%22lodash%22,%22root%22:%22_%22%7D?");
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_lodash__;\n\n//# sourceURL=webpack://webpackNumbers/external_%7B%22commonjs%22:%22lodash%22,%22commonjs2%22:%22lodash%22,%22amd%22:%22lodash%22,%22root%22:%22_%22%7D?");
 
 /***/ })
 
 /******/ });
+});
