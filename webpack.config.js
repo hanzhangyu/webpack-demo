@@ -12,7 +12,7 @@ module.exports = {
   },
   devtool: "inline-source-map",
   output: {
-    filename: "[name].bundle.js",
+    filename: '[name].[contenthash].js',
     chunkFilename: '[name].bundle.js', // 决定 non-entry chunk(非入口 chunk) 的名称
     path: path.resolve(__dirname, "dist"),
     publicPath: "./"
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "管理输出"
+      title: "Caching"
     }),
     new ManifestPlugin(),
     // new BundleAnalyzerPlugin()
