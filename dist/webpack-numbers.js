@@ -1,3 +1,4 @@
+var webpackNumbers =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -94,7 +95,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"numToWord\", function() { return numToWord; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"wordToNum\", function() { return wordToNum; });\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"lodash\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ref_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ref.json */ \"./src/ref.json\");\nvar _ref_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./ref.json */ \"./src/ref.json\", 1);\n\n\n\nfunction numToWord(num) {\n  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(\n    _ref_json__WEBPACK_IMPORTED_MODULE_1__,\n    (accum, ref) => {\n      return ref.num === num ? ref.word : accum;\n    },\n    \"\"\n  );\n}\n\nfunction wordToNum(word) {\n  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(\n    _ref_json__WEBPACK_IMPORTED_MODULE_1__,\n    (accum, ref) => {\n      return ref.word === word && word.toLowerCase() ? ref.num : accum;\n    },\n    -1\n  );\n}\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"numToWord\", function() { return numToWord; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"wordToNum\", function() { return wordToNum; });\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"lodash\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ref_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ref.json */ \"./src/ref.json\");\nvar _ref_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./ref.json */ \"./src/ref.json\", 1);\n\n\n\nfunction numToWord(num) {\n  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(\n    _ref_json__WEBPACK_IMPORTED_MODULE_1__,\n    (accum, ref) => {\n      return ref.num === num ? ref.word : accum;\n    },\n    \"\"\n  );\n}\n\nfunction wordToNum(word) {\n  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(\n    _ref_json__WEBPACK_IMPORTED_MODULE_1__,\n    (accum, ref) => {\n      return ref.word === word && word.toLowerCase() ? ref.num : accum;\n    },\n    -1\n  );\n}\n\n\n//# sourceURL=webpack://webpackNumbers/./src/index.js?");
 
 /***/ }),
 
@@ -105,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*! exports provided: 0, 1, 2, 3, 4, 5, default */
 /***/ (function(module) {
 
-eval("module.exports = JSON.parse(\"[{\\\"num\\\":1,\\\"word\\\":\\\"One\\\"},{\\\"num\\\":2,\\\"word\\\":\\\"Two\\\"},{\\\"num\\\":3,\\\"word\\\":\\\"Three\\\"},{\\\"num\\\":4,\\\"word\\\":\\\"Four\\\"},{\\\"num\\\":5,\\\"word\\\":\\\"Five\\\"},{\\\"num\\\":0,\\\"word\\\":\\\"Zero\\\"}]\");\n\n//# sourceURL=webpack:///./src/ref.json?");
+eval("module.exports = JSON.parse(\"[{\\\"num\\\":1,\\\"word\\\":\\\"One\\\"},{\\\"num\\\":2,\\\"word\\\":\\\"Two\\\"},{\\\"num\\\":3,\\\"word\\\":\\\"Three\\\"},{\\\"num\\\":4,\\\"word\\\":\\\"Four\\\"},{\\\"num\\\":5,\\\"word\\\":\\\"Five\\\"},{\\\"num\\\":0,\\\"word\\\":\\\"Zero\\\"}]\");\n\n//# sourceURL=webpack://webpackNumbers/./src/ref.json?");
 
 /***/ }),
 
@@ -116,7 +117,7 @@ eval("module.exports = JSON.parse(\"[{\\\"num\\\":1,\\\"word\\\":\\\"One\\\"},{\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = undefined;\n\n//# sourceURL=webpack:///external_%7B%22commonjs%22:%22lodash%22,%22commonjs2%22:%22lodash%22,%22amd%22:%22lodash%22,%22root%22:%22_%22%7D?");
+eval("module.exports = undefined;\n\n//# sourceURL=webpack://webpackNumbers/external_%7B%22commonjs%22:%22lodash%22,%22commonjs2%22:%22lodash%22,%22amd%22:%22lodash%22,%22root%22:%22_%22%7D?");
 
 /***/ })
 
