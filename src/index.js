@@ -1,4 +1,4 @@
-import { cube } from "../module";
+import { cube } from "./math";
 
 function component() {
   var element = document.createElement("pre");

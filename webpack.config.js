@@ -5,15 +5,11 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 // const webpack = require("webpack");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     app: "./src/index.js"
   },
   devtool: "inline-source-map",
-  optimization: {
-    usedExports: true,
-    sideEffects: true
-  },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
