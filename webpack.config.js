@@ -7,18 +7,13 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js",
-    another: "./src/another-module.js"
+    index: "./src/index.js"
   },
   devtool: "inline-source-map",
   output: {
     filename: "[name].bundle.js",
+    chunkFilename: '[name].bundle.js', // 决定 non-entry chunk(非入口 chunk) 的名称
     path: path.resolve(__dirname, "dist")
-  },
-  optimization: {
-    splitChunks: {
-      chunks: "all"
-    }
   },
   plugins: [
     new CleanWebpackPlugin(),

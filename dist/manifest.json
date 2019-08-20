@@ -1,0 +1,5 @@
+{
+  "index.js": "index.bundle.js",
+  "vendors~lodash.js": "vendors~lodash.bundle.js",
+  "index.html": "index.html"
+}
