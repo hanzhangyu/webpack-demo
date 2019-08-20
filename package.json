@@ -4,10 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
     "server": "node server.js",
     "watch": "webpack --watch",
-    "build": "webpack --display-used-exports"
+    "build": "webpack --display-used-exports --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +26,7 @@
     "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.8.0",
     "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.2.1",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
