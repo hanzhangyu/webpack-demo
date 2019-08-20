@@ -17,12 +17,15 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "./"
   },
+  optimization: {
+    runtimeChunk: "single"
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Caching"
     }),
-    new ManifestPlugin(),
+    new ManifestPlugin()
     // new BundleAnalyzerPlugin()
 
     // new webpack.HotModuleReplacementPlugin()

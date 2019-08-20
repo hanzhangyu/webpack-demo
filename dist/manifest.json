@@ -1,4 +1,5 @@
 {
-  "index.js": "./index.610e241dee7f9ac652f5.js",
+  "index.js": "./index.bundle.js",
+  "runtime.js": "./runtime.9e409c463d91b7f7f162.js",
   "index.html": "./index.html"
 }
