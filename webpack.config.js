@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
@@ -10,29 +10,19 @@ module.exports = {
     app: "./src/index.js"
   },
   devtool: "inline-source-map",
-  devServer: {
-    contentBase: "./dist",
-    hot: true
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
+  optimization: {
+    // usedExports: true
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/"
+    path: path.resolve(__dirname, "dist")
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "管理输出"
     }),
-    new ManifestPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new ManifestPlugin()
+    // new webpack.HotModuleReplacementPlugin()
   ]
 };
