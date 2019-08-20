@@ -1,33 +1,18 @@
 import _ from "lodash";
+import printMe from './print.js';
 
 function component() {
-  var element = document.createElement("div");
-  var button = document.createElement("button");
-  var br = document.createElement("br");
+    var element = document.createElement("div");
+    var btn = document.createElement('button');
 
-  button.innerHTML = "Click me and look at the console!";
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.appendChild(br);
-  element.appendChild(button);
+    element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-  button.onclick = e =>
-    // 懒加载
-    import(/* webpackChunkName: "print" */ "./print").then(module => {
-      console.log("loaded print");
-      var print = module.default;
+    btn.innerHTML = '点击这里，然后查看 console！';
+    btn.onclick = printMe;
 
-      print();
-    });
+    element.appendChild(btn);
 
-  return element;
+    return element;
 }
 
 document.body.appendChild(component());
-
-// import(
-//   /* webpackChunkName: "lodash" */
-//   /* webpackPrefetch: true */
-//   "lodash"
-// );
-//
-// console.log("onload");
