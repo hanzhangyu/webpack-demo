@@ -23,7 +23,7 @@ module.exports = {
       title: "管理输出"
     }),
     new ManifestPlugin(),
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
 
     // new webpack.HotModuleReplacementPlugin()
   ]

@@ -1,23 +1,33 @@
-// function getComponent() {
-//   return import(/* webpackChunkName: "lodash" */ "lodash")
-//     .then(({ default: _ }) => {
-//       var element = document.createElement("div");
-//
-//       element.innerHTML = _.join(["Hello", "webpack"], " ");
-//
-//       return element;
-//     })
-//     .catch(error => "An error occurred while loading the component");
-// }
-//
-// getComponent().then(component => {
-//   document.body.appendChild(component);
-// });
+import _ from "lodash";
 
-import(
-  /* webpackChunkName: "lodash" */
-  /* webpackPrefetch: true */
-  "lodash"
-);
+function component() {
+  var element = document.createElement("div");
+  var button = document.createElement("button");
+  var br = document.createElement("br");
 
-console.log("onload");
+  button.innerHTML = "Click me and look at the console!";
+  element.innerHTML = _.join(["Hello", "webpack"], " ");
+  element.appendChild(br);
+  element.appendChild(button);
+
+  button.onclick = e =>
+    // 懒加载
+    import(/* webpackChunkName: "print" */ "./print").then(module => {
+      console.log("loaded print");
+      var print = module.default;
+
+      print();
+    });
+
+  return element;
+}
+
+document.body.appendChild(component());
+
+// import(
+//   /* webpackChunkName: "lodash" */
+//   /* webpackPrefetch: true */
+//   "lodash"
+// );
+//
+// console.log("onload");
