@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "server": "node server.js",
     "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack --display-used-exports"
   },
   "keywords": [],
   "author": "",

@@ -11,7 +11,8 @@ module.exports = {
   },
   devtool: "inline-source-map",
   optimization: {
-    usedExports: true
+    usedExports: true,
+    sideEffects: true
   },
   output: {
     filename: "[name].bundle.js",

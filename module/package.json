@@ -1,0 +1,5 @@
+{
+  "name": "math",
+  "main": "index.js",
+  "sideEffects": false
+}
