@@ -22,7 +22,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "管理输出"
     }),
-    new ManifestPlugin(),
+    new ManifestPlugin()
+
     // new webpack.optimize.ModuleConcatenationPlugin() // 已被废弃了，推荐 optimization.concatenateModules
     // new webpack.HotModuleReplacementPlugin()
   ]
