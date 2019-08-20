@@ -1,5 +1,6 @@
 {
-  "index.js": "./index.bundle.js",
-  "runtime.js": "./runtime.9e409c463d91b7f7f162.js",
+  "index.js": "./index.c2734bc082176be4f657.js",
+  "runtime.js": "./runtime.e32723e3b3155fc50b93.js",
+  "vendors.js": "./vendors.0361f19b3ff481068002.js",
   "index.html": "./index.html"
 }
