@@ -7,7 +7,8 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    index: "./src/index.js"
+    index: "./src/index.js",
+    another: "./src/another-module.js"
   },
   devtool: "inline-source-map",
   output: {
