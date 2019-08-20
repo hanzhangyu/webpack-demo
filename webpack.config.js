@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 // const webpack = require("webpack");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "development",
@@ -21,7 +22,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "管理输出"
     }),
-    new ManifestPlugin()
+    new ManifestPlugin(),
+    new BundleAnalyzerPlugin()
 
     // new webpack.HotModuleReplacementPlugin()
   ]
