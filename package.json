@@ -4,10 +4,10 @@
   "description": "",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "webpack-dev-server --open",
     "server": "node server.js",
     "watch": "webpack --watch",
-    "build": "webpack --display-used-exports --config webpack.prod.js"
+    "build": "webpack --display-used-exports"
   },
   "keywords": [],
   "author": "",
