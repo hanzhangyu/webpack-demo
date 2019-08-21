@@ -10,7 +10,7 @@
     "httpServer": "http-server dist",
     "server": "node server.js",
     "watch": "webpack --watch",
-    "build": "webpack --display-used-exports"
+    "build": "webpack --env.NODE_ENV=local --env.production --progress"
   },
   "keywords": [],
   "author": "",
