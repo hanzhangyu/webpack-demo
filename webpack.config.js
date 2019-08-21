@@ -3,9 +3,12 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: {
+    polyfills: "./src/polyfills.js",
+    index: "./src/index.js"
+  },
   output: {
-    filename: "main.js",
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, "dist")
   },
   module: {
