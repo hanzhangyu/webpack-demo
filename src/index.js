@@ -8,7 +8,13 @@ function component() {
     // element.innerHTML = join(['Hello', 'webpack'], ' ');
     console.log('file', file);
     parse();
+    require('./script.exec.js');
+    require('./script.test.js');
 
+
+    // 不会重复运行
+    require('./script.exec.js');
+    require('./script.test.js');
     return element;
 }
 

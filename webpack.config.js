@@ -20,6 +20,10 @@ module.exports = {
       {
         test: require.resolve("./src/globals.js"),
         use: "exports-loader?file,parse=helpers.parse"
+      },
+      {
+        test: /\.exec\.js$/,
+        use: [ 'script-loader' ]
       }
     ]
   },

@@ -1,0 +1,1 @@
+console.log("exec in global context", this);
