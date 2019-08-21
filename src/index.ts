@@ -3,6 +3,7 @@ function component() {
 
   element.innerHTML = ["Hello", "Ts"].join(" ");
 
+  console.log('ts');
   return element;
 }
 

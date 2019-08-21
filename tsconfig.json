@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "sourceMap": true, // 我们必须配置 TypeScript，以将内联的 source map 输出到编译后的 JavaScript 文件中
     "noImplicitAny": true,
     "module": "es6",
     "target": "es5",
