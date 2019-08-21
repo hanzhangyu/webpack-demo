@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/globals.js":
+/*!************************!*\
+  !*** ./src/globals.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var file = 'blah.txt';\r\nvar helpers = {\r\n    test: function() { console.log('test something'); },\r\n    parse: function() { console.log('parse something'); }\r\n};\n\n/*** EXPORTS FROM exports-loader ***/\nexports[\"file\"] = (file);\nexports[\"parse\"] = (helpers.parse);\n\n//# sourceURL=webpack:///./src/globals.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -94,18 +105,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./print */ \"./src/print.js\");\n/* harmony import */ var _print__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_print__WEBPACK_IMPORTED_MODULE_0__);\n// import _ from \"lodash\";\n\n\nfunction component() {\n    let element = document.createElement('div');\n\n    // element.innerHTML = join(['Hello', 'webpack'], ' ');\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/print.js":
-/*!**********************!*\
-  !*** ./src/print.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("/*** IMPORTS FROM imports-loader ***/\n(function() {\n\nconsole.log(this === module.exports);\nconsole.log(this === window);\nthis.alert('Hmmm, this probably isn\\'t a great idea...'); // 没有使用 import-loader 时 this 为 module.exports\n}.call(window));\n\n//# sourceURL=webpack:///./src/print.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _globals_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./globals.js */ \"./src/globals.js\");\n/* harmony import */ var _globals_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_globals_js__WEBPACK_IMPORTED_MODULE_0__);\n// import _ from \"lodash\";\n// import \"./print\";\n\n\nfunction component() {\n    let element = document.createElement('div');\n\n    // element.innerHTML = join(['Hello', 'webpack'], ' ');\n    console.log('file', _globals_js__WEBPACK_IMPORTED_MODULE_0__[\"file\"]);\n    Object(_globals_js__WEBPACK_IMPORTED_MODULE_0__[\"parse\"])();\n\n    return element;\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
