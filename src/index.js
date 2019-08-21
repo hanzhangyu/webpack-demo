@@ -1,9 +1,10 @@
 // import _ from "lodash";
+import "./print";
 
 function component() {
     let element = document.createElement('div');
 
-    element.innerHTML = join(['Hello', 'webpack'], ' ');
+    // element.innerHTML = join(['Hello', 'webpack'], ' ');
 
     return element;
 }
