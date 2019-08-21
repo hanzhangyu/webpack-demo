@@ -1,5 +1,6 @@
 // import _ from "lodash";
 // import "./print";
+import 'babel-polyfill';
 import { file, parse } from './globals.js'
 
 function component() {
