@@ -1,3 +1,20 @@
 body {
   background: red;
 }
+
+.a {
+  color: #fff;
+}
+
+:local(.b) {
+  background: red;
+}
+:local .b {
+  color: green;
+}
+:local(.b .c) {
+  color: green;
+}
+:local .b .c :global(.global-class-name) {
+  color: blue;
+}
