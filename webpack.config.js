@@ -1,35 +1,23 @@
 const path = require("path");
-const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const ManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = {
   mode: "development",
   entry: {
-    polyfills: "./src/polyfills.js",
-    index: "./src/index.js"
+    app: "./src/index.js",
+    print: "./src/print.js"
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
   },
-  module: {
-    rules: [
-      {
-        test: require.resolve("./src/print.js"),
-        use: "imports-loader?this=>window"
-      },
-      {
-        test: require.resolve("./src/globals.js"),
-        use: "exports-loader?file,parse=helpers.parse"
-      },
-      {
-        test: /\.exec\.js$/,
-        use: [ 'script-loader' ]
-      }
-    ]
-  },
   plugins: [
-    new webpack.ProvidePlugin({
-      join: ["lodash", "join"]
-    })
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "管理输出"
+    }),
+    new ManifestPlugin()
   ]
 };
