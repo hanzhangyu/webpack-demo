@@ -105,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pri
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(this === module.exports);\nconsole.log(this === window);\nthis.alert('Hmmm, this probably isn\\'t a great idea...'); // 没有使用 import-loader 时 this 为 module.exports\n\n//# sourceURL=webpack:///./src/print.js?");
+eval("/*** IMPORTS FROM imports-loader ***/\n(function() {\n\nconsole.log(this === module.exports);\nconsole.log(this === window);\nthis.alert('Hmmm, this probably isn\\'t a great idea...'); // 没有使用 import-loader 时 this 为 module.exports\n}.call(window));\n\n//# sourceURL=webpack:///./src/print.js?");
 
 /***/ })
 
