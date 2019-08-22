@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = env => {
   // Use env.<YOUR VARIABLE> here: 这里我们并没有使用
@@ -37,6 +38,12 @@ module.exports = env => {
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "dist")
-    }
+    },
+    plugins: [
+      new webpack.DllReferencePlugin({
+        context: ".",
+        manifest: require("./dist/vendor-manifest.json") // eslint-disable-line
+      })
+    ]
   };
 };
