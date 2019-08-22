@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = env => {
@@ -11,12 +12,21 @@ module.exports = env => {
   return {
     mode: "development",
     entry: "./src/index.ts",
-    devtool: "inline-source-map", // 告诉 webpack 提取这些 source map，并内联到最终的 bundle 中。
+    devtool: "cheap-module-eval-source-map", // 源码 ts，无法在语句级别打断点
+    // devtool: "cheap-eval-source-map", // loader转换过的代码
     module: {
       rules: [
         {
           test: /\.tsx?$/,
-          use: "ts-loader",
+          use: [
+            "cache-loader",
+            {
+              loader: "ts-loader",
+              options: {
+                transpileOnly: true // 主进程不进行 type checking，因为 类型检查 需要 rebuild 所有文件
+              }
+            }
+          ],
           exclude: /node_modules/
         },
         {
@@ -39,7 +49,8 @@ module.exports = env => {
     },
     output: {
       filename: "bundle.js",
-      path: path.resolve(__dirname, "dist")
+      path: path.resolve(__dirname, "dist"),
+      pathinfo: false // 输出结果不携带路径信息
     },
     optimization: {
       splitChunks: {
@@ -48,6 +59,7 @@ module.exports = env => {
       }
     },
     plugins: [
+      new ForkTsCheckerWebpackPlugin(), // 在分离的进程中执行 type checking
       new HtmlWebpackPlugin({
         title: "管理输出",
         templateParameters: {

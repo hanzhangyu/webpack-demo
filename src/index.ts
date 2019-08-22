@@ -6,14 +6,14 @@ console.log(classNames); // {}
 
 console.log(square(3));
 
-function component() {
+function component(num: number) {
   let element = document.createElement("div");
   element.classList.add(classNames.a);
 
   element.innerHTML = ["Hello", "Ts"].join(" ");
 
-  console.log("ts");
+  console.log("ts", num);
   return element;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(component(12));
