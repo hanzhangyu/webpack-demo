@@ -31,7 +31,8 @@ module.exports = env => {
       ]
     },
     resolve: {
-      extensions: [".tsx", ".ts", ".js"]
+      symlinks: false, // 如果不使用 symlinks（npm link），关闭提高 解析速度
+      extensions: [".tsx", ".ts", ".js"] // 减少 resolve.modules, resolve.extensions, resolve.mainFiles, resolve.descriptionFiles 中 items 数量，因为他们会增加文件系统调用的次数。
     },
     output: {
       filename: "bundle.js",
