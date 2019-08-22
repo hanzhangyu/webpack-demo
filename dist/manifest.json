@@ -1,7 +1,4 @@
 {
-  "app.js": "app.bundle.js",
-  "print.js": "print.bundle.js",
-  "index.html": "index.html",
-  "precache-manifest.4ac2c9e6a4bcbd6e7f41e374b117ccf5.js": "precache-manifest.4ac2c9e6a4bcbd6e7f41e374b117ccf5.js",
-  "service-worker.js": "service-worker.js"
+  "main.js": "bundle.js",
+  "index.html": "index.html"
 }

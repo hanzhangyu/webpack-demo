@@ -1,10 +1,12 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ManifestPlugin = require("webpack-manifest-plugin");
 const webpack = require("webpack");
 
 module.exports = env => {
   // Use env.<YOUR VARIABLE> here: 这里我们并没有使用
-  console.log('NODE_ENV: ', env.NODE_ENV); // 'local'
-  console.log('Production: ', env.production); // true
+  console.log("NODE_ENV: ", env.NODE_ENV); // 'local'
+  console.log("Production: ", env.production); // true
 
   return {
     mode: "development",
@@ -40,10 +42,18 @@ module.exports = env => {
       path: path.resolve(__dirname, "dist")
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        title: "管理输出",
+        templateParameters: {
+          'dll_hash':/[^_]+$/.exec(require("./dist/dll-manifest.json").name)[0] // TODO 寻找一个更加优雅的方式引入 dll
+        },
+        template: "./template.html"
+      }),
       new webpack.DllReferencePlugin({
         context: ".",
-        manifest: require("./dist/vendor-manifest.json") // eslint-disable-line
-      })
+        manifest: require("./dist/dll-manifest.json") // eslint-disable-line
+      }),
+      new ManifestPlugin()
     ]
   };
 };
