@@ -57,7 +57,7 @@ module.exports = env => {
       }),
       new webpack.DllReferencePlugin({
         context: ".",
-        manifest: require("./dist/dll-manifest.json") // eslint-disable-line
+        manifest: require("./dist/dll-manifest.json")
       }),
       new ManifestPlugin()
     ]
