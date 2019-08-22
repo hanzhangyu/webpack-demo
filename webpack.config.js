@@ -44,14 +44,14 @@ module.exports = env => {
     optimization: {
       splitChunks: {
         // include all types of chunks
-        chunks: 'all'
+        chunks: "all"
       }
     },
     plugins: [
       new HtmlWebpackPlugin({
         title: "管理输出",
         templateParameters: {
-          'dll_hash':/[^_]+$/.exec(require("./dist/dll-manifest.json").name)[0] // TODO 寻找一个更加优雅的方式引入 dll
+          dll_hash: /[^_]+$/.exec(require("./dist/dll-manifest.json").name)[0] // TODO 寻找一个更加优雅的方式引入 dll
         },
         template: "./template.html"
       }),
