@@ -41,6 +41,12 @@ module.exports = env => {
       filename: "bundle.js",
       path: path.resolve(__dirname, "dist")
     },
+    optimization: {
+      splitChunks: {
+        // include all types of chunks
+        chunks: 'all'
+      }
+    },
     plugins: [
       new HtmlWebpackPlugin({
         title: "管理输出",
