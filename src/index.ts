@@ -2,6 +2,8 @@
 import classNames from "./styles.css";
 import { square } from "../custom-module";
 
+console.log("process.env.ASSET_PATH", process.env.ASSET_PATH);
+
 // const name = "a";
 // require(`./lib/${name}.lib.js`);
 

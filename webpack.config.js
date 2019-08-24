@@ -9,6 +9,7 @@ module.exports = env => {
   // Use env.<YOUR VARIABLE> here: 这里我们并没有使用
   console.log("NODE_ENV: ", env.NODE_ENV); // 'local'
   console.log("Production: ", env.production); // true
+  console.log("ASSET_PATH : ", env.ASSET_PATH); // true
 
   return {
     mode: "development",
@@ -50,6 +51,7 @@ module.exports = env => {
     },
     output: {
       filename: "bundle.js",
+      publicPath: env.ASSET_PATH,
       path: path.resolve(__dirname, "dist"),
       pathinfo: false // 输出结果不携带路径信息
     },
@@ -61,6 +63,9 @@ module.exports = env => {
     },
     plugins: [
       // new ForkTsCheckerWebpackPlugin(), // 在分离的进程中执行 type checking
+      new webpack.DefinePlugin({
+        "process.env.ASSET_PATH": JSON.stringify(env.ASSET_PATH)
+      }),
       new HtmlWebpackPlugin({
         title: "管理输出",
         templateParameters: {
