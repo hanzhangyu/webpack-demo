@@ -1,4 +1,6 @@
-import _ from "lodash";
+// import _ from "lodash";
+
+console.log("src/index.js");
 
 function component() {
   let element = document.createElement("div");
