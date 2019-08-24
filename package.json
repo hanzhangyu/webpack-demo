@@ -20,6 +20,7 @@
     "@types/lodash": "^4.14.137",
     "cache-loader": "^4.1.0",
     "clean-webpack-plugin": "^3.0.0",
+    "csp-html-webpack-plugin": "^3.0.3",
     "css-loader": "^3.2.0",
     "csv-loader": "^3.0.2",
     "exports-loader": "^0.7.0",

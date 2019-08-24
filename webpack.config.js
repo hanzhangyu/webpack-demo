@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ManifestPlugin = require("webpack-manifest-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const webpack = require("webpack");
 
 module.exports = env => {
@@ -59,7 +60,7 @@ module.exports = env => {
       }
     },
     plugins: [
-      new ForkTsCheckerWebpackPlugin(), // 在分离的进程中执行 type checking
+      // new ForkTsCheckerWebpackPlugin(), // 在分离的进程中执行 type checking
       new HtmlWebpackPlugin({
         title: "管理输出",
         templateParameters: {
@@ -71,6 +72,7 @@ module.exports = env => {
         context: ".",
         manifest: require("./dist/dll-manifest.json")
       }),
+      new CspHtmlWebpackPlugin(),
       new ManifestPlugin()
     ]
   };
