@@ -2,8 +2,14 @@
 import classNames from "./styles.css";
 import { square } from "../custom-module";
 
-const name = "a";
-require(`./lib/${name}.lib.js`);
+// const name = "a";
+// require(`./lib/${name}.lib.js`);
+
+const libContext = require.context('./lib', false, /^\.\//);
+libContext.keys().forEach(key => {
+  console.log(key, "resolved");
+  libContext(key);
+});
 
 console.log(classNames); // {}
 
