@@ -1,6 +1,9 @@
 // import { join } from "lodash";
 import classNames from "./styles.css";
-import {square} from "../custom-module";
+import { square } from "../custom-module";
+
+const name = "a";
+require(`./lib/${name}.lib.js`);
 
 console.log(classNames); // {}
 
