@@ -13,7 +13,7 @@ module.exports = env => {
 
   return {
     mode: "development",
-    entry: ["./src/index.ts", "./src/index.js"],
+    entry: "./src/index.ts",
     devtool: "cheap-module-eval-source-map", // 源码 ts， 无法在语句级别打断点
     // devtool: "cheap-eval-source-map", // loader转换过的代码
     module: {
@@ -77,7 +77,7 @@ module.exports = env => {
         context: ".",
         manifest: require("./dist/dll-manifest.json")
       }),
-      new CspHtmlWebpackPlugin(),
+      // new CspHtmlWebpackPlugin(),
       new ManifestPlugin()
     ]
   };
