@@ -34,6 +34,7 @@ async function dynamicParsePhRequire(ctx, source) {
     const data = await Promise.all(
       reqs.map(async path => {
         const filename = await resolve(ctx.context, JSON.parse(path));
+        ctx.addDependency(filename);
         return loadModule(
           [require.resolve("./stringify-loader.js"), filename].join("!") // 这里其实没有必要，less-loader 是因为 url 里面的可以为任何东西，把它包裹一次 " 变为js字符串，绕过 loadModule 报错 non-JS modules
         ).then(JSON.parse); // 然后在使用 parse 复原即可
