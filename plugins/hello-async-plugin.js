@@ -1,5 +1,6 @@
 class HelloAsyncPlugin {
   apply(compiler) {
+    // 生成资源到 output 目录之前
     compiler.hooks.emit.tapAsync(
       "HelloAsyncPlugin",
       (compilation, callback) => {
