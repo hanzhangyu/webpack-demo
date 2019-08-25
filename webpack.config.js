@@ -36,7 +36,8 @@ module.exports = env => {
               options: {
                 test: '123'
               }
-            }
+            },
+            path.resolve('loaders/nothing-loader.js'),
           ],
           exclude: /node_modules/
         },
