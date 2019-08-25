@@ -87,11 +87,19 @@
 /******/ ({
 
 /***/ "./src/customSyntax.js":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return printMe; });
+console.log("hello loader dep");
 
 console.log("hello loader dep");
 
-__webpack_require__("./src/print.js").default();
+function printMe() {
+    console.log("I get called from print.js!");
+}
+
 
 /***/ }),
 
@@ -101,11 +109,12 @@ __webpack_require__("./src/print.js").default();
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _customSyntax__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("./src/customSyntax.js");
-/* harmony import */ var _customSyntax__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_customSyntax__WEBPACK_IMPORTED_MODULE_0__);
 console.log("hello loader dep");
 
 // import _ from "lodash";
 
+
+Object(_customSyntax__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
 console.log("src/index.js");
 
@@ -118,21 +127,6 @@ function component() {
 }
 
 document.body.appendChild(component());
-
-
-/***/ }),
-
-/***/ "./src/print.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return printMe; });
-console.log("hello loader dep");
-
-function printMe() {
-    console.log("I get called from print.js!");
-}
 
 
 /***/ })

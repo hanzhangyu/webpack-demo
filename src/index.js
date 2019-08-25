@@ -1,6 +1,8 @@
 // import _ from "lodash";
 import customSyntax from "./customSyntax";
 
+customSyntax();
+
 console.log("src/index.js");
 
 function component() {

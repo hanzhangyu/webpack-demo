@@ -5,6 +5,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const webpack = require("webpack");
 
+// debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
 module.exports = env => {
   // Use env.<YOUR VARIABLE> here: 这里我们并没有使用
   console.log("NODE_ENV: ", env.NODE_ENV); // 'local'
@@ -29,7 +30,7 @@ module.exports = env => {
             //     transpileOnly: true // 主进程不进行 type checking，因为 类型检查 需要 rebuild 所有文件
             //   }
             // },
-            path.resolve('loaders/phreq-loader.js'),
+            path.resolve('loaders/phreq-rewriter-loader.js'),
             {
               loader: path.resolve('loaders/foo-loader.js'),
               options: {
