@@ -5,6 +5,7 @@ const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const webpack = require("webpack");
 const HelloWorldPlugin = require("./plugins/hello-world-plugin");
+const HelloCompilationPlugin = require("./plugins/hello-compilation-plugin");
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
 module.exports = env => {
@@ -90,7 +91,8 @@ module.exports = env => {
       }),
       // new CspHtmlWebpackPlugin(),
       new ManifestPlugin(),
-      new HelloWorldPlugin()
+      new HelloWorldPlugin(),
+      new HelloCompilationPlugin()
     ]
   };
 };
