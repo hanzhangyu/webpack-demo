@@ -27,6 +27,12 @@ module.exports = env => {
               options: {
                 transpileOnly: true // 主进程不进行 type checking，因为 类型检查 需要 rebuild 所有文件
               }
+            },
+            {
+              loader: path.resolve('loaders/foo-loader.js'),
+              options: {
+                test: '123'
+              }
             }
           ],
           exclude: /node_modules/
