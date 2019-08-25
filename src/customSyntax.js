@@ -1,0 +1,1 @@
+ph_require(["./print.js"], true);

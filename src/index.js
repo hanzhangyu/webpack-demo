@@ -1,4 +1,5 @@
 // import _ from "lodash";
+import customSyntax from "./customSyntax";
 
 console.log("src/index.js");
 
