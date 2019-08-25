@@ -4,6 +4,7 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const webpack = require("webpack");
+const HelloWorldPlugin = require("./plugins/hello-world-plugin");
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
 module.exports = env => {
@@ -30,14 +31,14 @@ module.exports = env => {
             //     transpileOnly: true // 主进程不进行 type checking，因为 类型检查 需要 rebuild 所有文件
             //   }
             // },
-            path.resolve('loaders/phreq-rewriter-loader.js'),
+            path.resolve("loaders/phreq-rewriter-loader.js"),
             {
-              loader: path.resolve('loaders/foo-loader.js'),
+              loader: path.resolve("loaders/foo-loader.js"),
               options: {
-                test: '123'
+                test: "123"
               }
             },
-            path.resolve('loaders/nothing-loader.js'),
+            path.resolve("loaders/nothing-loader.js")
           ],
           exclude: /node_modules/
         },
@@ -88,7 +89,8 @@ module.exports = env => {
         manifest: require("./dist/dll-manifest.json")
       }),
       // new CspHtmlWebpackPlugin(),
-      new ManifestPlugin()
+      new ManifestPlugin(),
+      new HelloWorldPlugin()
     ]
   };
 };
