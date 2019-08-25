@@ -14,7 +14,8 @@ module.exports = env => {
   return {
     mode: "development",
     entry: "./src/index.js",
-    devtool: "cheap-module-eval-source-map", // 源码 ts， 无法在语句级别打断点
+    devtool: "cheap-module-source-map",
+    // devtool: "cheap-module-eval-source-map", // 源码 ts， 无法在语句级别打断点
     // devtool: "cheap-eval-source-map", // loader转换过的代码
     module: {
       rules: [
