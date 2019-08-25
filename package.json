@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --open",
     "httpServer": "http-server dist",
     "server": "node server.js",
-    "watch": "webpack --watch",
+    "watch": "webpack --env.NODE_ENV=local --env.production --env.ASSET_PATH=./ --progress --watch",
     "build": "webpack --env.NODE_ENV=local --env.production --env.ASSET_PATH=./ --progress",
     "dll": "webpack --config webpack.dll.js"
   },
