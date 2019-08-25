@@ -13,21 +13,21 @@ module.exports = env => {
 
   return {
     mode: "development",
-    entry: "./src/index.ts",
+    entry: "./src/index.js",
     devtool: "cheap-module-eval-source-map", // 源码 ts， 无法在语句级别打断点
     // devtool: "cheap-eval-source-map", // loader转换过的代码
     module: {
       rules: [
         {
-          test: /\.tsx?$/,
+          test: /\.js?$/,
           use: [
             "cache-loader",
-            {
-              loader: "ts-loader",
-              options: {
-                transpileOnly: true // 主进程不进行 type checking，因为 类型检查 需要 rebuild 所有文件
-              }
-            },
+            // {
+            //   loader: "ts-loader",
+            //   options: {
+            //     transpileOnly: true // 主进程不进行 type checking，因为 类型检查 需要 rebuild 所有文件
+            //   }
+            // },
             {
               loader: path.resolve('loaders/foo-loader.js'),
               options: {
