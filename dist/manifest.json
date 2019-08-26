@@ -1,5 +1,6 @@
 {
   "main.js": "./bundle.js",
   "main.js.map": "./bundle.js.map",
+  "filelist.md": "./filelist.md",
   "index.html": "./index.html"
 }

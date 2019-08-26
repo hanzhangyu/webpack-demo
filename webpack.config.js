@@ -8,6 +8,7 @@ const HelloWorldPlugin = require("./plugins/hello-world-plugin");
 const HelloCompilationPlugin = require("./plugins/hello-compilation-plugin");
 const HelloAsyncPlugin = require("./plugins/hello-async-plugin");
 const HelloPromisePlugin = require("./plugins/hello-promise-plugin.js");
+const FileListPlugin = require("./plugins/file-list-plugin.js");
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
 module.exports = env => {
@@ -96,7 +97,8 @@ module.exports = env => {
       new HelloWorldPlugin(),
       new HelloCompilationPlugin(),
       new HelloAsyncPlugin(),
-      new HelloPromisePlugin()
+      new HelloPromisePlugin(),
+      new FileListPlugin()
     ]
   };
 };
