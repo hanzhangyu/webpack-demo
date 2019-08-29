@@ -13,7 +13,7 @@ class WatchGraphPlugin {
     this.prevTimestamps = new Map();
   }
   apply(compiler: Compiler) {
-    debugger;
+    // debugger;
     compiler.hooks.emit.tap("WatchGraphPlugin", compilation => {
       var changedFiles = Array.from(compilation.fileTimestamps.keys()).filter(
         watchfile => {

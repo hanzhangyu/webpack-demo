@@ -12,7 +12,7 @@ import FileListPlugin from "./plugins/file-list-plugin";
 import ManifestPlugin from "./plugins/webpack-manifest-plugin";
 import WalkFilePlugin from "./plugins/walk-file-plugin";
 import WatchGraphPlugin from "./plugins/watch-graph-plugin";
-console.log(HtmlWebpackPlugin);
+import WatchChunkPlugin from "./plugins/watch-chunk-plugin";
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
 module.exports = (
@@ -114,6 +114,7 @@ module.exports = (
       new FileListPlugin(),
       new WalkFilePlugin(),
       new WatchGraphPlugin(),
+      new WatchChunkPlugin(),
     ]
   };
 };
