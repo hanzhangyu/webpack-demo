@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ManifestPlugin = require("webpack-manifest-plugin");
+// const ManifestPlugin = require("webpack-manifest-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
 const webpack = require("webpack");
@@ -9,6 +9,7 @@ const HelloCompilationPlugin = require("./plugins/hello-compilation-plugin");
 const HelloAsyncPlugin = require("./plugins/hello-async-plugin");
 const HelloPromisePlugin = require("./plugins/hello-promise-plugin.js");
 const FileListPlugin = require("./plugins/file-list-plugin.js");
+const ManifestPlugin = require("./plugins/webpack-manifest-plugin.js");
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
 module.exports = env => {
