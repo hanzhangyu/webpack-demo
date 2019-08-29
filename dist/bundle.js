@@ -122,6 +122,7 @@ function component() {
   let element = document.createElement("div");
 
   element.innerHTML = ["Hello", "webpack"].join(" ");
+  // element.innerHTML = _.join(["Hello", "webpack"], " ");
 
   return element;
 }
