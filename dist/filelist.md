@@ -1,9 +1,9 @@
 In this build:
 
-- index.js
-- runtime.js
-- vendors~index.js
-- runtime.js.map
-- vendors~index.js.map
-- index.js.map
 - index.html
+- index.js
+- index.js.map
+- runtime.js
+- runtime.js.map
+- vendors~index.js
+- vendors~index.js.map
