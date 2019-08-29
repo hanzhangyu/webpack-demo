@@ -1,19 +1,22 @@
 import * as path from "path";
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import HtmlWebpackPlugin from "html-webpack-plugin";
 // const ManifestPlugin = require("webpack-manifest-plugin");
-const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const CspHtmlWebpackPlugin = require("csp-html-webpack-plugin");
-import * as webpack from 'webpack'
-const HelloWorldPlugin = require("./plugins/hello-world-plugin");
-const HelloCompilationPlugin = require("./plugins/hello-compilation-plugin");
-const HelloAsyncPlugin = require("./plugins/hello-async-plugin");
-const HelloPromisePlugin = require("./plugins/hello-promise-plugin.js");
-const FileListPlugin = require("./plugins/file-list-plugin.js");
-const ManifestPlugin = require("./plugins/webpack-manifest-plugin.js");
-const WalkFilePlugin = require("./plugins/walk-file-plugin.js");
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import CspHtmlWebpackPlugin from "csp-html-webpack-plugin";
+import * as webpack from "webpack";
+import HelloWorldPlugin from "./plugins/hello-world-plugin";
+import HelloCompilationPlugin from "./plugins/hello-compilation-plugin";
+import HelloAsyncPlugin from "./plugins/hello-async-plugin";
+import HelloPromisePlugin from "./plugins/hello-promise-plugin";
+import FileListPlugin from "./plugins/file-list-plugin";
+import ManifestPlugin from "./plugins/webpack-manifest-plugin";
+import WalkFilePlugin from "./plugins/walk-file-plugin.js";
+console.log(HtmlWebpackPlugin);
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
-module.exports = (env: Record<'NODE_ENV' | 'production' |'ASSET_PATH', string>): webpack.Configuration => {
+module.exports = (
+  env: Record<"NODE_ENV" | "production" | "ASSET_PATH", string>
+): webpack.Configuration => {
   // Use env.<YOUR VARIABLE> here: 这里我们并没有使用
   console.log("NODE_ENV: ", env.NODE_ENV); // 'local'
   console.log("Production: ", env.production); // true
@@ -107,7 +110,7 @@ module.exports = (env: Record<'NODE_ENV' | 'production' |'ASSET_PATH', string>):
       new HelloCompilationPlugin(),
       new HelloAsyncPlugin(),
       new HelloPromisePlugin(),
-      new FileListPlugin(),
+      new FileListPlugin()
       // new WalkFilePlugin()
     ]
   };

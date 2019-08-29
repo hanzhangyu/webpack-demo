@@ -1,5 +1,7 @@
+import { Compiler } from "webpack";
+
 class HelloPromisePlugin {
-  apply(compiler) {
+  apply(compiler: Compiler) {
     // 生成资源到 output 目录之前
     compiler.hooks.emit.tapPromise("HelloPromisePlugin", compilation => {
       // 返回一个 Promise，在我们的异步任务完成时 resolve……
@@ -14,4 +16,4 @@ class HelloPromisePlugin {
   }
 }
 
-module.exports = HelloPromisePlugin;
+export default HelloPromisePlugin;

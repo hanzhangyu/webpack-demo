@@ -1,7 +1,9 @@
+// webstrom 似乎不能根据不同的文件使用不同的 tsconfig, 所以只能 编译时 查错了。。。
 {
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": true
   }
 }

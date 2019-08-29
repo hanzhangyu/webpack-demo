@@ -1,5 +1,7 @@
+import { Compiler } from "webpack";
+
 class HelloAsyncPlugin {
-  apply(compiler) {
+  apply(compiler: Compiler) {
     // 生成资源到 output 目录之前
     compiler.hooks.emit.tapAsync(
       "HelloAsyncPlugin",
@@ -14,4 +16,4 @@ class HelloAsyncPlugin {
   }
 }
 
-module.exports = HelloAsyncPlugin;
+export default HelloAsyncPlugin;

@@ -1,5 +1,7 @@
+import { Compiler } from "webpack";
+
 class HelloCompilationPlugin {
-  apply(compiler) {
+  apply(compiler: Compiler) {
     // tap(触及) 到 compilation hook，而在 callback 回调时，会将 compilation 对象作为参数，（编译(compilation)创建之后，执行插件）
     compiler.hooks.compilation.tap('HelloCompilationPlugin', compilation => {
       // 现在，通过 compilation 对象，我们可以 tap(触及) 到各种可用的 hooks 了，（优化阶段开始时触发，执行插件）
@@ -10,4 +12,4 @@ class HelloCompilationPlugin {
   }
 }
 
-module.exports = HelloCompilationPlugin;
+export default HelloCompilationPlugin;
