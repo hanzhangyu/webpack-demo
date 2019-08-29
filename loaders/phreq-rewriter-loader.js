@@ -28,7 +28,7 @@ async function dynamicParsePhRequire(ctx, source) {
   const loadModule = promisify(ctx.loadModule);
   let js = source;
   let match;
-  debugger;
+  // debugger;
   while ((match = reqRE.exec(source))) {
     const reqs = match.groups.reqAry.split(",");
     const data = await Promise.all(

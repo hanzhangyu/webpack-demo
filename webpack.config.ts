@@ -10,7 +10,7 @@ import HelloAsyncPlugin from "./plugins/hello-async-plugin";
 import HelloPromisePlugin from "./plugins/hello-promise-plugin";
 import FileListPlugin from "./plugins/file-list-plugin";
 import ManifestPlugin from "./plugins/webpack-manifest-plugin";
-import WalkFilePlugin from "./plugins/walk-file-plugin.js";
+import WalkFilePlugin from "./plugins/walk-file-plugin";
 console.log(HtmlWebpackPlugin);
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
@@ -24,10 +24,10 @@ module.exports = (
 
   return {
     mode: "development",
-    entry: "./src/index.js",
-    // entry: {
-    //   index: "./src/index.js"
-    // },
+    // entry: "./src/index.js",
+    entry: {
+      index: "./src/index.js"
+    },
     devtool: "cheap-module-source-map",
     // devtool: "cheap-module-eval-source-map", // 源码 ts， 无法在语句级别打断点
     // devtool: "cheap-eval-source-map", // loader转换过的代码
@@ -73,21 +73,21 @@ module.exports = (
       extensions: [".tsx", ".ts", ".js"] // 减少 resolve.modules, resolve.extensions, resolve.mainFiles, resolve.descriptionFiles 中 items 数量，因为他们会增加文件系统调用的次数。
     },
     output: {
-      filename: "bundle.js",
-      // filename: "[name].js",
+      // filename: "bundle.js",
+      filename: "[name].js",
       publicPath: env.ASSET_PATH,
       path: path.resolve(__dirname, "dist"),
       pathinfo: false // 输出结果不携带路径信息
     },
-    // optimization: {
-    //   runtimeChunk: "single",
-    //   splitChunks: {
-    //     chunks(chunk) {
-    //       console.log("\nchunk name", chunk.name);
-    //       return chunk.name === "index"; // entry 为 index 才会 使用 chunk 分析
-    //     }
-    //   }
-    // },
+    optimization: {
+      runtimeChunk: "single",
+      splitChunks: {
+        chunks(chunk) {
+          console.log("\nchunk name", chunk.name);
+          return chunk.name === "index"; // entry 为 index 才会 使用 chunk 分析
+        }
+      }
+    },
     plugins: [
       // new ForkTsCheckerWebpackPlugin(), // 在分离的进程中执行 type checking
       new webpack.DefinePlugin({
@@ -110,8 +110,8 @@ module.exports = (
       new HelloCompilationPlugin(),
       new HelloAsyncPlugin(),
       new HelloPromisePlugin(),
-      new FileListPlugin()
-      // new WalkFilePlugin()
+      new FileListPlugin(),
+      new WalkFilePlugin()
     ]
   };
 };

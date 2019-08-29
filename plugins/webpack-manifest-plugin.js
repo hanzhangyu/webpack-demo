@@ -4,7 +4,7 @@ var _ = require("lodash");
 const emitCountMap = new Map();
 
 function ManifestPlugin(opts) {
-  debugger;
+  // debugger;
   this.opts = _.assign(
     {
       publicPath: null,
@@ -36,7 +36,7 @@ ManifestPlugin.prototype.getFileType = function(str) {
 };
 
 ManifestPlugin.prototype.apply = function(compiler) {
-  debugger;
+  // debugger;
   var moduleAssets = {};
 
   var outputFolder = compiler.options.output.path;
@@ -91,8 +91,8 @@ ManifestPlugin.prototype.apply = function(compiler) {
               isInitial: chunk.isOnlyInitial
                 ? chunk.isOnlyInitial()
                 : chunk.isInitial
-                ? chunk.isInitial()
-                : chunk.initial,
+                  ? chunk.isInitial()
+                  : chunk.initial,
               isChunk: true,
               isAsset: false,
               isModuleAsset: false
@@ -137,7 +137,7 @@ ManifestPlugin.prototype.apply = function(compiler) {
       });
     }, files);
 
-    debugger;
+    // debugger;
     // region 过滤 hot updates 与 manifest
     files = files.filter(function(file) {
       // Don't add hot updates to manifest

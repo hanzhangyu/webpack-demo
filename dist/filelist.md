@@ -1,5 +1,9 @@
 In this build:
 
-- bundle.js
-- bundle.js.map
+- index.js
+- runtime.js
+- vendors~index.js
+- index.js.map
+- runtime.js.map
+- vendors~index.js.map
 - index.html

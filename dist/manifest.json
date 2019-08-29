@@ -1,6 +1,10 @@
 {
-  "main.js": "./bundle.js",
-  "main.js.map": "./bundle.js.map",
+  "index.js": "./index.js",
+  "index.js.map": "./index.js.map",
+  "runtime.js": "./runtime.js",
+  "runtime.js.map": "./runtime.js.map",
+  "vendors~index.js": "./vendors~index.js",
+  "vendors~index.js.map": "./vendors~index.js.map",
   "filelist.md": "./filelist.md",
   "index.html": "./index.html"
 }
