@@ -11,6 +11,7 @@ import HelloPromisePlugin from "./plugins/hello-promise-plugin";
 import FileListPlugin from "./plugins/file-list-plugin";
 import ManifestPlugin from "./plugins/webpack-manifest-plugin";
 import WalkFilePlugin from "./plugins/walk-file-plugin";
+import WatchGraphPlugin from "./plugins/watch-graph-plugin";
 console.log(HtmlWebpackPlugin);
 
 // debugger; // 使用 chrome 调试，webstorm 似乎没有捕获到
@@ -111,7 +112,8 @@ module.exports = (
       new HelloAsyncPlugin(),
       new HelloPromisePlugin(),
       new FileListPlugin(),
-      new WalkFilePlugin()
+      new WalkFilePlugin(),
+      new WatchGraphPlugin(),
     ]
   };
 };

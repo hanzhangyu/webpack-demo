@@ -16,8 +16,8 @@ import { Compiler } from "webpack";
 
 class WalkFilePlugin {
   apply(compiler: Compiler) {
-    debugger;
-    compiler.hooks.emit.tap("MyPlugin", compilation => {
+    // debugger;
+    compiler.hooks.emit.tap("WalkFilePlugin", compilation => {
       // region 获取 file dependencies
       // 检索每个（构建输出的）chunk：
       console.log();
