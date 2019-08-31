@@ -32,6 +32,9 @@ console.log("hello loader dep");
 
 Object(_customSyntax__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
+const name = "a";
+__webpack_require__("./src/lib sync recursive ^\\.\\/.*\\.lib\\.js$")(`./${name}.lib.js`);
+
 console.log("src/index.js");
 
 function component() {
@@ -45,6 +48,54 @@ function component() {
 
 document.body.appendChild(component());
 
+
+/***/ }),
+
+/***/ "./src/lib sync recursive ^\\.\\/.*\\.lib\\.js$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./a.lib.js": "./src/lib/a.lib.js",
+	"./b.lib.js": "./src/lib/b.lib.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./src/lib sync recursive ^\\.\\/.*\\.lib\\.js$";
+
+/***/ }),
+
+/***/ "./src/lib/a.lib.js":
+/***/ (function(module, exports) {
+
+console.log("hello loader dep");
+
+console.log("a.lib");
+
+/***/ }),
+
+/***/ "./src/lib/b.lib.js":
+/***/ (function(module, exports) {
+
+console.log("hello loader dep");
+
+console.log("b.lib");
 
 /***/ })
 

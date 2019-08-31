@@ -28,7 +28,7 @@ class WalkFilePlugin {
         chunk._modules.forEach((module: any) => {
           console.log("【MODULE】", module.id);
           // 检索模块中包含的每个源文件路径：
-          module.buildInfo.fileDependencies.forEach((filepath: string) => {
+          module.buildInfo.fileDependencies && module.buildInfo.fileDependencies.forEach((filepath: string) => {
             // 我们现在已经对源结构有不少了解……
             console.log("【fileDependencies】", filepath);
           });

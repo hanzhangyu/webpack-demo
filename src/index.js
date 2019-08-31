@@ -3,6 +3,9 @@ import customSyntax from "./customSyntax";
 
 customSyntax();
 
+const name = "a";
+require(`./lib/${name}.lib.js`);
+
 console.log("src/index.js");
 
 function component() {
