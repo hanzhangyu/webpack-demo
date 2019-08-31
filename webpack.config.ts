@@ -83,9 +83,19 @@ module.exports = (
     optimization: {
       runtimeChunk: "single",
       splitChunks: {
-        chunks(chunk) {
-          console.log("\nchunk name", chunk.name);
-          return chunk.name === "index"; // entry 为 index 才会 使用 chunk 分析
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/,
+            filename: "[name].js",
+            chunks: "all",
+            enforce: true
+          },
+          lib: {
+            test: /[\\/]lib/,
+            filename: "[name].js",
+            chunks: "all",
+            enforce: true
+          }
         }
       }
     },

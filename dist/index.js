@@ -79,25 +79,7 @@ webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./src/lib sync recursive ^\\.\\/.*\\.lib\\.js$";
 
-/***/ }),
-
-/***/ "./src/lib/a.lib.js":
-/***/ (function(module, exports) {
-
-console.log("hello loader dep");
-
-console.log("a.lib");
-
-/***/ }),
-
-/***/ "./src/lib/b.lib.js":
-/***/ (function(module, exports) {
-
-console.log("hello loader dep");
-
-console.log("b.lib");
-
 /***/ })
 
-},[["./src/index.js","runtime","vendors~index"]]]);
+},[["./src/index.js","runtime","vendors~index","lib~index"]]]);
 //# sourceMappingURL=index.js.map

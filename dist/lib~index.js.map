@@ -1,0 +1,1 @@
+{"version":3,"file":"lib~index.js","sources":["webpack:///./src/lib/a.lib.js","webpack:///./src/lib/b.lib.js"],"sourcesContent":["console.log(\"hello loader dep\");\n\nconsole.log(\"a.lib\");","console.log(\"hello loader dep\");\n\nconsole.log(\"b.lib\");"],"mappings":";;;;;AAAA;AACA;AACA;;;;;;;ACFA;AACA;AACA;;;;A","sourceRoot":""}
