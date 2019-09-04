@@ -3,9 +3,7 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": "last 3 Chrome versions"
-        }
+        "targets": "last 3 Chrome versions"
       }
     ]
   ]
