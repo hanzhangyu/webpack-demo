@@ -6,3 +6,5 @@ export const asyncFN = async () => {
   await sleep(400);
   return "1";
 };
+
+export const unused = 1;
