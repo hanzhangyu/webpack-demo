@@ -1,5 +1,6 @@
 {
   "main": "jsFile.cjs.js",
+  "module": "jsFile.js",
   "browserslist": [
     "last 3 Chrome versions",
     "last 2 Safari versions",
