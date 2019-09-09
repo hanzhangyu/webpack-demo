@@ -2,7 +2,7 @@ import Vue from "vue";
 import { cube } from "./math";
 
 import Hello from "../node_modules/@paulhan/Comp/Hello.vue";
-import asyncFN from "../node_modules/@paulhan/Comp/jsFile.js";
+import {asyncFN} from "../node_modules/@paulhan/Comp";
 
 async function init() {
   await asyncFN();
