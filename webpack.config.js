@@ -6,7 +6,7 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 // const webpack = require("webpack");
 
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: {
     app: "./src/index.js"
   },
@@ -51,7 +51,7 @@ module.exports = {
     ]
   },
   optimization: {
-    minimize: true,
+    minimize: false,
     splitChunks: {
       cacheGroups: {
         vendor: {
