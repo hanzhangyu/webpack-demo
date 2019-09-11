@@ -24,25 +24,25 @@ module.exports = {
       {
         test: /\.js$/,
         loader: "babel-loader",
-        exclude: [
-          filepath => {
-            console.log(
-              filepath,
-              /\.vue\.jsx?$/.test(filepath) ||
-                /node_modules\/@paulhan/.test(filepath)
-            );
-            // always transpile js in vue files
-            if (/\.vue\.jsx?$/.test(filepath)) {
-              return false;
-            }
-            // check if this is something the user explicitly wants to transpile
-            if (/node_modules\/@paulhan/.test(filepath)) {
-              return false;
-            }
-            // Don't transpile node_modules
-            return /node_modules/.test(filepath);
-          }
-        ]
+        // exclude: [
+        //   filepath => {
+        //     console.log(
+        //       filepath,
+        //       /\.vue\.jsx?$/.test(filepath) ||
+        //         /node_modules\/@paulhan/.test(filepath)
+        //     );
+        //     // always transpile js in vue files
+        //     if (/\.vue\.jsx?$/.test(filepath)) {
+        //       return false;
+        //     }
+        //     // check if this is something the user explicitly wants to transpile
+        //     if (/node_modules\/@paulhan/.test(filepath)) {
+        //       return false;
+        //     }
+        //     // Don't transpile node_modules
+        //     return /node_modules/.test(filepath);
+        //   }
+        // ]
       },
       {
         test: /\.css$/,

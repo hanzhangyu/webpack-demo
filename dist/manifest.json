@@ -1,5 +1,4 @@
 {
   "app.js": "app.bundle.js",
-  "vendors.js": "vendors.bundle.js",
   "index.html": "index.html"
 }
