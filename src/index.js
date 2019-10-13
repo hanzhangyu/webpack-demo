@@ -12,3 +12,13 @@ function component() {
 
 let element = component();
 document.body.appendChild(element);
+
+class A {
+  aa() {
+    console.log('aa');
+  }
+  bb() {
+    console.log('bb');
+  }
+}
+new A(); // 只要使用了 new class，那么所有属性都会被保留
